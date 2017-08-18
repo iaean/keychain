@@ -9,7 +9,7 @@ The reason is, that Ubuntu 16.04 installs ```gpg-agent``` version 2.1.x and ```g
  * Error: Problem adding (is pinentry installed?); giving up
 ```
 
-To overcome the situation we need ```gpg2``` support in ```keychain```. There is an issue [#83](/funtoo/keychain/issues/83) open for that. The workarounds are:
+To overcome the situation we need ```gpg2``` support in ```keychain```. There is an issue [#83][83] open for that. The workarounds are:
 
 * Downgrade Ubuntu 16.04 to ```gpg-agent``` version 1.4.x
 * Switch using ```gpg2```
@@ -61,3 +61,6 @@ time your local machine is rebooted. `Keychain` also makes it easy for remote
 cron jobs to securely "hook in" to a long running `ssh-agent` process,
 allowing your scripts to take advantage of key-based logins.
 
+
+
+[83]: (https://github.com/funtoo/keychain/issues/83)
