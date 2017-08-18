@@ -11,7 +11,7 @@ The reason is, that Ubuntu 16.04 installs ```gpg-agent``` version 2.1.x and ```g
 
 To overcome the situation we need ```gpg2``` support in ```keychain```. There is an issue [#83](https://github.com/funtoo/keychain/issues/83) open for that. The workarounds are:
 
-* Downgrade Ubuntu 16.04 to ```gpg-agent``` version 1.4.x
+* Downgrade Ubuntu 16.04 to ```gpg-agent``` version 2.0.x or 1.4.x
 * Switch using ```gpg2```
 
 To make the second work, here is a quick hack:
