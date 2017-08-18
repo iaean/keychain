@@ -11,8 +11,8 @@ The reason is, that Ubuntu installs ```gpg-agent``` version 2.1.x and ```gpg``` 
 
 To overcome the situation we need ```gpg2``` support in ```keychain```. There is an issue open for that. The workarounds are:
 
-* downgrade Ubuntu 16.04 to ```gpg-agent``` 1.4.x
-* switch using ```gpg2```
+* Downgrade Ubuntu 16.04 to ```gpg-agent``` version 1.4.x
+* Switch using ```gpg2```
 
 To make the second work, here is a quick hack:
 
