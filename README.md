@@ -1,8 +1,8 @@
-There is an issue in Ubuntu 16.04, that results in a lot of hassle running ```keychain``` with ```gpg-agent``` at least in WSL.
+There is an issue in Ubuntu 16.04, that results in a lot of hassle running ```keychain``` with ```gpg-agent``` at least on WSL.
 
-The reason is, that Ubuntu installs ```gpg-agent``` version 2.1.x and ```gpg``` client version 1.4.x. As the net points out, both versions are not really compatible. Distros provide ```gpg2``` packages for version 2.x. ```Keychain``` isn't aware of ```gpg2``` and Ubuntu 16.04 mix both versions. Buhh...
+The reason is, that Ubuntu 16.04 installs ```gpg-agent``` version 2.1.x and ```gpg``` client version 1.4.x. As the net points out, both versions are not really compatible. Distros provide ```gpg2``` packages for version 2.x. ```Keychain``` isn't aware of ```gpg2``` and Ubuntu 16.04 mix both versions. Buhh...
 
-### Inital error
+### Initial error
 
 ```
  * Adding N gpg key(s): ID ...
