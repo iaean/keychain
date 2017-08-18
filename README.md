@@ -19,7 +19,7 @@ To make the second work, here is a quick hack:
 ### Install
 
 ```bash
-sudo apt install gpg2
+sudo apt install gnupg2
 sudo apt install make
 mkdir -m 0700 ~/.keychain
 git clone https://github.com/iaean/keychain ~/.keychain/keychain
