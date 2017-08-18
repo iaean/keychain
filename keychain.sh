@@ -810,7 +810,7 @@ gpg_listmissing() {
 	for glm_k in "$@"; do
 		# Check if this key is known to the agent.	Don't know another way...
 		if echo | env -i GPG_TTY="$GPG_TTY" PATH="$PATH" GPG_AGENT_INFO="$GPG_AGENT_INFO" \
-				gpg --no-options --use-agent --no-tty --sign --local-user "$glm_k" -o- >/dev/null 2>&1; then
+				gpg2 --no-options --use-agent --no-tty --sign --local-user "$glm_k" -o- >/dev/null 2>&1; then
 			# already know about this key
 			mesg "Known gpg key: ${CYANN}${glm_k}${OFF}"
 			continue
@@ -913,7 +913,7 @@ parse_mykeys() {
 
 		# Check for gpg
 		if wantagent gpg; then
-                        gpg --list-secret-keys "$pm_k" >/dev/null 2>&1
+                        gpg2 --list-secret-keys "$pm_k" >/dev/null 2>&1
                         if [ $? -eq 0 ]; then
                                 add_gpgkey "$pm_k" ; continue
 			fi
@@ -1461,7 +1461,7 @@ if wantagent gpg; then
 
 		for k in "$@"; do
 			echo | env LC_ALL="$pinentry_lc_all" \
-				gpg --no-options --use-agent --no-tty --sign --local-user "$k" -o- >/dev/null 2>&1
+				gpg2 --no-options --use-agent --no-tty --sign --local-user "$k" -o- >/dev/null 2>&1
 			[ $? != 0 ] && tryagain=true
 		done
 		$tryagain || break
